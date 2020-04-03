@@ -26,36 +26,36 @@
 
 [[override]]
   name = "github.com/tektoncd/triggers"
-  version = "v0.2.1"
+  version = "v0.4.0-rc1"
 
 [[override]]
   name = "k8s.io/api"
-  version = "kubernetes-1.13.4"
+  version = "v0.16.5"
 
 [[override]]
   name = "k8s.io/apimachinery"
-  version = "kubernetes-1.13.4"
+  version = "v0.16.5"
 
 [[override]]
   name = "k8s.io/client-go"
-  version = "kubernetes-1.13.4"
+  version = "v0.16.5"
 
 [[override]]
   name = "github.com/openshift/client-go"
-  branch = "release-4.2"
+  branch = "release-4.3"
 
 [[override]]
   name = "github.com/openshift/api"
-  branch = "release-4.2"
+  branch = "release-4.3"
 
 [[override]]
   name = "github.com/tektoncd/pipeline"
-  version = "v0.10.1"
+  version = "v0.11.0"
+
+[[override]]
+  name = "knative.dev/pkg"
+  branch = "release-0.12"
 
 [prune]
   go-tests = true
   unused-packages = true
-
-
-
-
