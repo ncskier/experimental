@@ -282,11 +282,11 @@ func (r Resource) newTrigger(name, bindingName, templateName, repoURL, event, se
 		Name: name,
 		Bindings: []*v1alpha1.EventListenerBinding{
 			{
-				Name:       bindingName,
+				Ref:        bindingName,
 				APIVersion: "v1alpha1",
 			},
 			{
-				Name:       extraBindingName,
+				Ref:        extraBindingName,
 				APIVersion: "v1alpha1",
 			},
 		},

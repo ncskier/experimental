@@ -118,11 +118,11 @@ func TestNewTrigger(t *testing.T) {
 		Name: "myName",
 		Bindings: []*v1alpha1.EventListenerBinding{
 			{
-				Name:       "myBindingName",
+				Ref:        "myBindingName",
 				APIVersion: "v1alpha1",
 			},
 			{
-				Name:       "foo1234",
+				Ref:        "foo1234",
 				APIVersion: "v1alpha1",
 			},
 		},
@@ -893,13 +893,13 @@ func (r Resource) getExpectedPushAndPullRequestTriggersForWebhook(webhook webhoo
 			Name: webhook.Name + "-" + webhook.Namespace + "-push-event",
 			Bindings: []*v1alpha1.EventListenerBinding{
 				{
-					Name:       webhook.Pipeline + "-push-binding",
+					Ref:        webhook.Pipeline + "-push-binding",
 					APIVersion: "v1alpha1",
 				},
 				{
 					// This name is not as it would be in the product, as
 					// GenerateName is used.
-					Name:       "wext-" + webhook.Name + "-",
+					Ref:        "wext-" + webhook.Name + "-",
 					APIVersion: "v1alpha1",
 				},
 			},
@@ -929,13 +929,13 @@ func (r Resource) getExpectedPushAndPullRequestTriggersForWebhook(webhook webhoo
 			Name: webhook.Name + "-" + webhook.Namespace + "-pullrequest-event",
 			Bindings: []*v1alpha1.EventListenerBinding{
 				{
-					Name:       webhook.Pipeline + "-pullrequest-binding",
+					Ref:        webhook.Pipeline + "-pullrequest-binding",
 					APIVersion: "v1alpha1",
 				},
 				{
 					// This name is not as it would be in the product, as
 					// GenerateName is used.
-					Name:       "wext-" + webhook.Name + "-",
+					Ref:        "wext-" + webhook.Name + "-",
 					APIVersion: "v1alpha1",
 				},
 			},
